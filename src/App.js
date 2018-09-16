@@ -4,24 +4,15 @@ import './App.css';
 
 // import library material component
 // install with "npm install @material-ui/core"
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
-class App extends Component {
-  state = {
-    nopes: ''
-  }
+// import component ./component
+import NopesForm from "./components/NopesForm.js";
 
-  // handle change of nopes input
-  handleChange = nopes => event => {
-    this.setState({
-      [nopes]: event.target.value,
-    });
-  };
+class App extends Component {
 
   render() {
     return (
@@ -36,18 +27,7 @@ class App extends Component {
           </AppBar>
 
           <br/> <br/> 
-
-          <TextField
-            id="nopes"
-            label="Nomer Peserta"
-            className="Nopes"
-            value={this.state.nopes}
-            onChange={this.handleChange('nopes')}
-            margin="normal"
-          />
-          <Button variant="contained" color="primary" size="large">
-            Lihat Hasil
-          </Button>
+          <NopesForm/>
 
           <p className="footer-msg">Develope with love at <a href="https://olimpiade.id">Olimpiade.id</a></p>
       </div>
