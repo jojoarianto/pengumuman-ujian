@@ -6,7 +6,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import InputLabel from '@material-ui/core/InputLabel';
 
 class NopesForm extends React.Component {
-	// data nopes
 	state = {
 		nopes: '',
 		age: '',
@@ -39,9 +38,7 @@ class NopesForm extends React.Component {
 		            }}
 		            margin="normal"
 		         >
-		            <MenuItem value={10}>Ten</MenuItem>
-		            <MenuItem value={20}>Twenty</MenuItem>
-		            <MenuItem value={30}>Thirty</MenuItem>
+		            <MenuItem value={10}>MLC Unair 2018</MenuItem>
 		        </Select>
 				<br/>
 				<TextField
